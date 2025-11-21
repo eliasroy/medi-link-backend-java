@@ -1,5 +1,7 @@
 package com.medilink.api.domain.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
@@ -10,10 +12,12 @@ import java.math.BigDecimal;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Medico {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_medico")
+    @JsonProperty("id")
     private Long idMedico;
 
     @OneToOne(fetch = FetchType.LAZY)

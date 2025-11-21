@@ -1,5 +1,6 @@
 package com.medilink.api.domain.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 import jakarta.persistence.*;
 import java.time.LocalDate;
@@ -12,8 +13,8 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class Paciente {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_paciente")
+    @JsonProperty("id")
     private Long idPaciente;
 
     @OneToOne(fetch = FetchType.LAZY)
