@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 public class Paciente {
     @Id
     @Column(name = "id_paciente")
-    @JsonProperty("id")
+    @JsonProperty("idPaciente")
     private Long idPaciente;
 
     @OneToOne(fetch = FetchType.LAZY)

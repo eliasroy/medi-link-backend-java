@@ -7,7 +7,7 @@ import org.springframework.data.rest.core.annotation.RestResource;
 
 import java.util.Optional;
 
-@RepositoryRestResource(path = "usuarios", collectionResourceRel = "usuarios")
+@RepositoryRestResource(exported = false)
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 
 

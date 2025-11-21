@@ -15,7 +15,7 @@ public class Especialidad {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_especialidad")
-    @JsonProperty("id")
+    @JsonProperty("idEspecialidad")
     private Long idEspecialidad;
 
     @Column(name = "nombre")

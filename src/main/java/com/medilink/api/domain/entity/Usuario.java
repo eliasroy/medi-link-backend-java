@@ -1,6 +1,7 @@
 package com.medilink.api.domain.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
@@ -17,7 +18,7 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_usuario")
-    @JsonProperty("id")
+    @JsonProperty("idUsuario")
     private Long idUsuario;
 
     @Column(name = "nombre", nullable = false)

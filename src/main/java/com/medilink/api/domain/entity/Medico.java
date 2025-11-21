@@ -1,6 +1,7 @@
 package com.medilink.api.domain.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 import jakarta.persistence.*;
@@ -17,9 +18,10 @@ public class Medico {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_medico")
-    @JsonProperty("id")
+    @JsonProperty("idMedico")
     private Long idMedico;
 
+    @JsonManagedReference
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_usuario", nullable = false, referencedColumnName = "id_usuario")
     private Usuario usuario;
