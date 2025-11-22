@@ -41,7 +41,7 @@ public class Usuario {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "rol", nullable = false)
-    private Rol rol = Rol.PACIENTE;
+    private Rol rol;
 
     @Column(name = "estado")
     private String estado;
